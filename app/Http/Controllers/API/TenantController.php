@@ -39,7 +39,7 @@ class TenantController extends Controller
             'fqdn' => ['required', 'string', 'unique:hostnames'],
             'fname' => ['required', 'string', 'max:255'],
             'lname' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:250'],
             'name' => ['required', 'string', 'max:255'],
             'package' => ['required', 'string'],
             'days' => ['required', 'numeric']
