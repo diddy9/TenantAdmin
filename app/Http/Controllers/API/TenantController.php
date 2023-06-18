@@ -36,13 +36,13 @@ class TenantController extends Controller
                 Rule::notIn( $invalidSubdomains ),
                 'regex:/^[A-Za-z0-9](?:[A-Za-z0-9\-]{0,61}[A-Za-z0-9])$/'
             ],
-            'fqdn' => ['required', 'string', 'unique:hostnames'],
-            'fname' => ['required', 'string', 'max:255'],
-            'lname' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:250'],
-            'name' => ['required', 'string', 'max:255'],
+            'fqdn'    => ['required', 'string', 'unique:hostnames'],
+            'fname'   => ['required', 'string', 'max:255'],
+            'lname'   => ['required', 'string', 'max:255'],
+            'email'   => ['required', 'string', 'email', 'max:250'],
+            'name'    => ['required', 'string', 'max:255'],
             'package' => ['required', 'string'],
-            'days' => ['required', 'numeric']
+            'days'    => ['required', 'numeric']
         ]);
         if($validator->fails()){
             return response()->json($validator->errors());       
