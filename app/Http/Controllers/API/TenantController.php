@@ -58,7 +58,7 @@ class TenantController extends Controller
             'f_name' => $req->fname,
             'l_name' => $req->lname,
             'email' => $req->email,
-            'role_id' => 3,
+            'role_id' => 4,
             'password' => Hash::make("Pass123$$"),
         ]);
 
